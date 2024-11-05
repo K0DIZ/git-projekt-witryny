@@ -1,3 +1,6 @@
+<?php
+    $conn = mysqli_connect("localhost", "root", "", "egzamin");
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -32,6 +35,33 @@
                 <input type="submit" name="submit" id="submit" value="Licz BMI i zapisz wynik">
             </form>
             <!-- wynik działania skryptu 1 -->
+             <?php
+                if ($conn) {
+                    @$waga = $_POST['waga'];
+                    @$wzrost = $_POST['wzrost'];
+                    if ($waga != "" && $wzrost != "" ) {
+                        $bmi = $waga / ($wzrost * $wzrost);
+                        $bmi = $bmi * 10000;
+                        echo "Twoja waga: $waga; Twój wzrost: $wzrost <br> BMI wynosi: $bmi";
+                        $przedzial = 0;
+                        if ($bmi >= 0 && $bmi < 19) {
+                            $przedzial = 1;
+                        }
+                        elseif (($bmi >= 19 && $bmi < 26)) {
+                            $przedzial = 2;
+                        }
+                        elseif (($bmi >= 26 && $bmi < 31)) {
+                            $przedzial = 3;
+                        }
+                        elseif ($bmi >= 31) {
+                            $przedzial = 4;
+                        }
+                        $data = date("Y-m-d");
+                        $sql1 = 'INSERT INTO wynik VALUES (NULL, '.$przedzial.', "'.$data.'", '.$bmi.');';
+                        $zapytanie1 = mysqli_query($conn, $sql1);
+                    }
+                }
+             ?>
         </section>
         <div class="clear"></div>
         <section id="glowny">
@@ -45,6 +75,11 @@
                 </thead>
                 <tbody>
                     <!-- wynik działania skryptu 2 -->
+                    <?php
+                        if ($conn) {
+                            
+                        }
+                    ?>
                 </tbody>
             </table>
         </section>
@@ -57,3 +92,8 @@
     </footer>
 </body>
 </html>
+<?php
+    if ($conn) {
+       mysqli_close($conn); 
+    }
+?>
