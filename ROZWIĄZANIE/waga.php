@@ -77,7 +77,15 @@
                     <!-- wynik działania skryptu 2 -->
                     <?php
                         if ($conn) {
-                            
+                            $sql2 = "SELECT id, informacja, wart_min FROM bmi;";
+                            $zapytanie2 = mysqli_query($conn, $sql2);
+                            while ($wiersz = mysqli_fetch_array($zapytanie2)) {
+                                echo "<tr>";
+                                echo "<td>$wiersz[0]</td>";
+                                echo "<td>$wiersz[1]</td>";
+                                echo "<td>$wiersz[2]</td>";
+                                echo "</tr>";
+                            }
                         }
                     ?>
                 </tbody>
