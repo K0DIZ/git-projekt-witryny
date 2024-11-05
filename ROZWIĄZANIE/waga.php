@@ -14,6 +14,7 @@
         <section id="logo">
             <img src="wzor.png" alt="liczymy BMI">
         </section>
+        <div class="clear"></div>
     </header>
     <main>
         <section id="lewy">
@@ -24,12 +25,15 @@
             <form action="waga.php" method="post">
                 <label for="waga">Waga: </label>
                 <input type="number" id="waga" name="waga">
+                <br>
                 <label for="wzrost">Wzrost [cm]: </label>
                 <input type="number" id="wzrost" name="wzrost">
+                <br>
                 <input type="submit" name="submit" id="submit" value="Licz BMI i zapisz wynik">
             </form>
             <!-- wynik działania skryptu 1 -->
         </section>
+        <div class="clear"></div>
         <section id="glowny">
             <table>
                 <thead>
