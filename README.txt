@@ -8,4 +8,6 @@ Import bazy danych:
 2. Wpisz w oknie przeglądarki localhost/phpmyadmin.
 3. Stwórz bazę danych o nazwie 'egzamin'.
 4. Zaimportuj plik .sql w folderze ROZWIĄZANIE o nazwie 'egzamin.sql' do bazy danych 'egzamin'.
-5. Po prawidłowym imporcie, przy domyślnych ustawieniach pakietu XAMPP, strona powinna prawidłowo się otworzyć.
+5. Umieść projekt strony w folderze xampp\htdocs (domyślnie C:\xampp\htdocs).
+6. Po prawidłowym imporcie, przy domyślnych ustawieniach pakietu XAMPP, strona powinna prawidłowo się otworzyć po wpisaniu w przeglądarce 
+internetowej frazy localhost i wyborze zaimportowanego w htdocs folderu (główny plik strony to waga.php).
