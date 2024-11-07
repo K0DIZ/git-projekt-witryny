@@ -1,5 +1,5 @@
 Projekt opracowany przez Konrada Zatorskiego na podstawie egzaminu EE09 arkusza EE09 styczeń 2021 zadanie 4 (pliki w folderze ARKUSZ).
-Program użyty do stworzenia i połączenia się do bazy danych z poziomu PHP: XAMPP 8.2.12 (PHP 8.2.12)
+Program użyty do stworzenia i połączenia się do bazy danych z poziomu PHP: XAMPP 8.2.12 (PHP 8.2.12).
 Wersja HTML: 5
 Wersja CSS: 3
 
